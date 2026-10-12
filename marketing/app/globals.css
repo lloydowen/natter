@@ -12,12 +12,18 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .hero { flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 72px 0 80px; }
 h1 { margin: 0; font-size: clamp(64px, 8.5vw, 120px); line-height: 1.05; font-weight: 600; letter-spacing: -.055em; }
 .rotating-heading { display: block; position: relative; }
-.rotating-name { display: grid; color: var(--accent); }
-.rotating-name > span { grid-area: 1 / 1; opacity: 0; animation: rotate-name 16s infinite; }
+.rotating-name { display: grid; overflow: hidden; color: var(--accent); }
+.rotating-name > span { grid-area: 1 / 1; opacity: 0; transform: translateY(110%); animation: rotate-name 16s cubic-bezier(.65, 0, .35, 1) infinite; }
 .rotating-name.is-paused > span { animation-play-state: paused; }
 .hero-period { display: none; }
 .closing-line { display: block; }
-@keyframes rotate-name { 0%, 22% { opacity: 1; } 25%, 97% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes rotate-name {
+  0%, 22% { opacity: 1; transform: translateY(0); }
+  25% { opacity: 1; transform: translateY(-110%); }
+  25.01%, 97% { opacity: 0; transform: translateY(110%); }
+  97.01% { opacity: 1; transform: translateY(110%); }
+  100% { opacity: 1; transform: translateY(0); }
+}
 .rotation-toggle { position: absolute; left: calc(100% + 24px); top: 50%; transform: translateY(-50%); border: 0; padding: 8px; background: transparent; color: var(--muted); font: 11px Arial, sans-serif; cursor: pointer; letter-spacing: 0; white-space: nowrap; }
 .rotation-toggle:hover { color: var(--foreground); }
 .intro { margin: 42px 0 0; font-size: 18px; line-height: 1.6; }
@@ -39,7 +45,7 @@ h1 { margin: 0; font-size: clamp(64px, 8.5vw, 120px); line-height: 1.05; font-we
 }
 @media (max-width: 400px) { .rotation-toggle { right: 0; bottom: -23px; transform: none; } }
 @media (prefers-reduced-motion: reduce) {
-  .rotating-name > span { animation: none; opacity: 0; }
+  .rotating-name > span { animation: none; opacity: 0; transform: none; }
   .rotating-name > span:first-child { opacity: 1; }
   .rotation-toggle { display: none; }
 }
