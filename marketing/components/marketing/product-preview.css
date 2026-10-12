@@ -1,0 +1,606 @@
+.marketing-site {
+  .product-preview {
+    margin: 0 0 56px;
+  }
+  .product-preview figcaption {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 18px;
+    padding: 0 4px;
+    color: var(--muted-foreground);
+    font-size: 12px;
+  }
+
+  .app-preview {
+    display: flex;
+    flex-direction: column;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    border-radius: var(--radius-xl);
+    --preview-sheet: color-mix(in oklab, var(--card) 45%, var(--background));
+    --preview-island: var(--card);
+    --preview-island-shadow: 0 6px 22px #0002;
+    background: var(--preview-sheet);
+    box-shadow:
+      0 24px 60px #0004,
+      0 0 80px color-mix(in oklab, var(--primary) 5%, transparent);
+    font-size: 11px;
+  }
+  .preview-titlebar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 38px;
+    flex-shrink: 0;
+    padding: 0 16px;
+    background: transparent;
+    color: var(--muted-foreground);
+  }
+  .preview-titlebar > span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+  }
+  .preview-titlebar .brand-mark {
+    width: 19px;
+    height: 13px;
+  }
+  .window-dots {
+    display: flex;
+    gap: 5px;
+  }
+  .window-dots > span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--muted);
+  }
+  .preview-body {
+    display: grid;
+    grid-template-columns: 190px minmax(0, 1fr) 230px;
+    gap: 12px;
+    padding: 0 14px 14px 0;
+    flex: 1;
+    min-height: 0;
+  }
+  .preview-sidebar {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 18px 12px 0 16px;
+    background: transparent;
+  }
+  .preview-workspace {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 3px 24px;
+  }
+  .preview-workspace > strong {
+    flex: 1;
+    font-size: 11px;
+  }
+  .workspace-icon {
+    display: grid;
+    place-items: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 8px;
+    background: var(--primary);
+    color: var(--primary-foreground);
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: -0.1em;
+  }
+  .preview-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 9px;
+    border-radius: var(--radius-sm);
+    color: var(--muted-foreground);
+  }
+  .preview-nav-item > span {
+    margin-left: auto;
+    background: var(--primary);
+    color: var(--primary-foreground);
+    border-radius: 4px;
+    padding: 0 4px;
+    font-size: 9px;
+  }
+  .preview-nav-item.is-selected {
+    background: color-mix(in oklab, var(--primary) 12%, transparent);
+    color: var(--primary);
+  }
+  .preview-nav-heading {
+    display: flex;
+    justify-content: space-between;
+    margin: 22px 9px 6px;
+    color: var(--muted-foreground);
+    font-size: 9px;
+  }
+  .preview-people {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin: 10px 9px;
+    color: var(--muted-foreground);
+    font-size: 8px;
+  }
+  .preview-people > span:last-child {
+    margin-left: 3px;
+  }
+  .mini-person {
+    display: inline-grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    border-radius: 7px;
+    color: var(--background);
+    font-size: 9px;
+    font-weight: 700;
+  }
+  .person-one {
+    background: var(--primary);
+  }
+  .person-two {
+    background: var(--secondary);
+  }
+  .person-three {
+    background: color-mix(in oklab, var(--primary) 50%, var(--foreground));
+  }
+  .preview-connection {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: auto 7px 16px;
+    color: var(--secondary);
+    font-size: 8px;
+  }
+  .connection-dot,
+  .preview-live > span {
+    width: 5px;
+    height: 5px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--secondary);
+  }
+  .preview-profile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    padding: 12px 0;
+  }
+  .preview-profile > span:nth-child(2) {
+    flex: 1;
+  }
+  .preview-profile small {
+    display: block;
+    font-size: 8px;
+    color: var(--muted-foreground);
+  }
+  .preview-profile > svg {
+    color: var(--muted-foreground);
+  }
+  .preview-call {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    min-width: 0;
+    padding: 18px;
+    background: var(--preview-island);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--preview-island-shadow);
+  }
+  .preview-room-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+  }
+  .preview-room-heading > span:first-child {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .preview-room-heading > span:first-child > svg {
+    color: var(--primary);
+  }
+  .preview-live {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 9px;
+    color: var(--secondary);
+  }
+  .preview-video-grid {
+    flex-shrink: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .preview-video {
+    position: relative;
+    display: grid;
+    place-items: end center;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+  }
+  .preview-video:hover {
+    box-shadow: 0 4px 14px #0003;
+  }
+  .video-one {
+    background: color-mix(in oklab, var(--primary) 25%, var(--background));
+  }
+  .video-two {
+    background: color-mix(in oklab, var(--secondary) 23%, var(--background));
+  }
+  .video-three {
+    background: color-mix(in oklab, var(--primary) 18%, var(--card));
+  }
+  .call-character {
+    position: absolute;
+    bottom: 0;
+    height: 95%;
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;
+    color: var(--background);
+    --character-skin: #e2b79a;
+    --character-clothes: var(--primary);
+  }
+  .character-two {
+    --character-skin: #be8d73;
+    --character-clothes: var(--secondary);
+  }
+  .character-three {
+    --character-skin: #ebcabb;
+    --character-clothes: var(--foreground);
+  }
+  .character-shirt {
+    fill: var(--character-clothes);
+  }
+  .character-face,
+  .character-neck {
+    fill: var(--character-skin);
+  }
+  .character-neck {
+    filter: brightness(0.85);
+  }
+  .character-hair {
+    fill: var(--background);
+  }
+  .participant-name {
+    position: absolute;
+    bottom: 6px;
+    left: 6px;
+    right: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 9px;
+    text-shadow: 0 1px 4px #000;
+  }
+  .preview-screen {
+    flex-shrink: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 6px 18px #0002;
+  }
+  .screen-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    padding: 0 10px;
+    background: color-mix(in oklab, var(--muted) 70%, var(--card));
+    color: var(--muted-foreground);
+    font-size: 9px;
+  }
+  .screen-toolbar > span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .screen-toolbar > span:last-child {
+    color: var(--secondary);
+  }
+  .screen-fps {
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-size: 8px;
+  }
+  .shared-canvas {
+    position: relative;
+    padding: 18px 24px 22px;
+    aspect-ratio: 16 / 9;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--primary-foreground);
+    background: color-mix(in oklab, var(--foreground) 90%, var(--primary));
+  }
+  .canvas-project {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 8px;
+  }
+  .canvas-composition {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 16px 0;
+  }
+  .canvas-composition p {
+    margin: 0 0 8px;
+    font-size: clamp(22px, 2.8vw, 36px);
+    line-height: 1.08;
+    font-weight: 700;
+    letter-spacing: -0.06em;
+  }
+  .canvas-composition > div:first-child > span {
+    font-size: 8px;
+  }
+  .canvas-mark {
+    display: grid;
+    place-items: center;
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+    border-radius: 24px;
+    background: var(--primary);
+    rotate: -8deg;
+    box-shadow: 4px 5px 0
+      color-mix(in oklab, var(--primary) 60%, var(--background));
+  }
+  .canvas-mark .brand-mark {
+    width: 70px;
+    height: 47px;
+    color: var(--primary-foreground);
+  }
+  .canvas-swatches {
+    display: flex;
+    gap: 5px;
+  }
+  .canvas-swatches span {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--background);
+  }
+  .canvas-swatches span:nth-child(2) {
+    background: var(--primary);
+  }
+  .canvas-swatches span:nth-child(3) {
+    background: var(--secondary);
+  }
+  .canvas-swatches span:nth-child(4) {
+    background: var(--foreground);
+  }
+  .collaborator-cursor {
+    position: absolute;
+    right: 40%;
+    bottom: 15px;
+    display: inline-flex;
+    align-items: flex-end;
+    gap: 2px;
+    color: var(--primary-foreground);
+  }
+  .collaborator-cursor > svg {
+    width: 14px;
+    height: 18px;
+  }
+  .collaborator-cursor > span {
+    padding: 2px 5px;
+    border-radius: 3px;
+    background: var(--primary-foreground);
+    color: var(--primary);
+    font-size: 8px;
+  }
+  .preview-call-controls {
+    align-self: center;
+    margin-top: 14px;
+    border-radius: 100px;
+    background: var(--preview-sheet);
+    box-shadow: 0 4px 12px #0002;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 7px;
+  }
+  .preview-call-controls > span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 30px;
+    border-radius: 100px;
+    background: var(--muted);
+    color: var(--foreground);
+  }
+  .preview-call-controls .is-sharing {
+    background: var(--primary);
+    color: var(--primary-foreground);
+  }
+  .preview-call-controls .hang-up {
+    background: color-mix(in oklab, var(--destructive) 18%, transparent);
+    color: var(--destructive);
+  }
+  .hang-up > svg {
+    rotate: 135deg;
+  }
+  .preview-chat {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 20px 16px 16px;
+    background: var(--preview-island);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--preview-island-shadow);
+  }
+  .preview-chat-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .preview-chat-heading > svg {
+    color: var(--muted-foreground);
+  }
+  .preview-chat-date {
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--muted-foreground);
+    font-size: 8px;
+  }
+  .preview-message {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  .preview-message strong {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 10px;
+    font-weight: 600;
+  }
+  .preview-message small {
+    margin-left: 5px;
+    color: var(--muted-foreground);
+    font-size: 8px;
+    font-weight: 400;
+  }
+  .preview-message p {
+    margin: 0;
+    color: color-mix(in oklab, var(--foreground) 75%, var(--muted-foreground));
+    font-size: 10px;
+    line-height: 1.7;
+  }
+  .preview-reaction {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 2px 6px;
+    border-radius: 5px;
+    background: color-mix(in oklab, var(--primary) 8%, transparent);
+    color: var(--primary);
+    font-size: 9px;
+  }
+  .preview-composer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+    padding: 12px 10px;
+    border-radius: var(--radius);
+    background: var(--preview-sheet);
+    color: var(--muted-foreground);
+    font-size: 9px;
+  }
+  @media (max-width: 1100px) {
+    .preview-body {
+      grid-template-columns: 160px minmax(0, 1fr) 180px;
+    }
+    .preview-workspace > strong {
+      font-size: 9px;
+    }
+    .canvas-mark {
+      width: 75px;
+      height: 75px;
+      border-radius: 18px;
+    }
+    .canvas-mark .brand-mark {
+      width: 54px;
+      height: 36px;
+    }
+    .preview-message {
+      gap: 6px;
+    }
+  }
+  @media (max-width: 850px) {
+    .app-preview {
+      aspect-ratio: auto;
+    }
+    .preview-screen {
+      margin-top: 12px;
+      margin-bottom: 0;
+    }
+    .preview-body {
+      grid-template-columns: 150px minmax(0, 1fr);
+      min-height: auto;
+    }
+    .preview-chat {
+      display: none;
+    }
+    .canvas-composition p {
+      font-size: 30px;
+    }
+  }
+  @media (max-width: 550px) {
+    .product-preview {
+      margin-bottom: 36px;
+    }
+    .preview-body {
+      grid-template-columns: 1fr;
+      padding: 0 8px 8px;
+      gap: 0;
+    }
+    .preview-sidebar {
+      display: none;
+    }
+    .preview-call {
+      padding: 12px;
+      border-radius: 18px;
+    }
+    .preview-titlebar {
+      height: 32px;
+      padding: 0 12px;
+    }
+    .shared-canvas {
+      padding: 14px;
+      min-height: 0;
+    }
+    .canvas-composition {
+      gap: 10px;
+    }
+    .canvas-composition p {
+      font-size: 24px;
+    }
+    .canvas-mark {
+      width: 66px;
+      height: 66px;
+      border-radius: 16px;
+    }
+    .canvas-mark .brand-mark {
+      width: 46px;
+      height: 31px;
+    }
+    .participant-name {
+      font-size: 8px;
+    }
+    .product-preview figcaption {
+      font-size: 10px;
+      gap: 8px;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .preview-video {
+      transition: none;
+    }
+  }
+}

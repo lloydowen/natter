@@ -1,0 +1,20 @@
+import type { SVGProps } from "react";
+import { cn } from "@/lib/utils";
+
+export function BrandMark({ className, ...props }: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      className={cn("brand-mark", className)}
+      viewBox="0 0 96 64"
+      fill="currentColor"
+      aria-hidden="true"
+      {...props}
+    >
+      <path
+        fillRule="evenodd"
+        d="M18 2h34a18 18 0 0 1 18 18v24a18 18 0 0 1-18 18H18A18 18 0 0 1 0 44V20A18 18 0 0 1 18 2Zm9 21a9 9 0 1 0 0 18 9 9 0 0 0 7.8-4.5H31a4.5 4.5 0 0 1 0-9h3.8A9 9 0 0 0 27 23Zm25 0a9 9 0 1 0 0 18 9 9 0 0 0 7.8-4.5H56a4.5 4.5 0 0 1 0-9h3.8A9 9 0 0 0 52 23Z"
+      />
+      <path d="m78 20 10-9c3-2.7 8-.6 8 3.5v35c0 4.1-5 6.2-8 3.5l-10-9a6 6 0 0 1-2-4.5v-15a6 6 0 0 1 2-4.5Z" />
+    </svg>
+  );
+}

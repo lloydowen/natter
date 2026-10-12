@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://natter.talk"),
+  metadataBase: new URL(site.url),
   title: "Natter — Your team. Your server.",
-  description:
-    "Replace Discord, Slack, Teams, or Mattermost. Team chat, video calls, 4K 60fps screen sharing, and native apps. Self-host or choose managed hosting at £30/month per team. Runs on LiveKit.",
+  description: site.description,
   icons: { icon: "/icon.svg" },
   openGraph: {
     title: "Natter — Your team. Your server.",
-    description: "Team chat, video calls, 4K 60fps screen sharing, and native apps. Host it yourself or choose managed hosting at £30/month per team. Runs on LiveKit.",
-    url: "https://natter.talk",
-    siteName: "Natter",
+    description: site.description,
+    url: site.url,
+    siteName: site.name,
     type: "website",
   },
 };

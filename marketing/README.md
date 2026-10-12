@@ -1,7 +1,27 @@
 # Natter marketing
 
-The coming-soon page for **Natter** at **natter.talk**.
-Built with Next.js and pnpm. The page uses a solid near-black background, off-white type, a muted blue accent, and a simple natter wordmark with an asterisk. The headline rotates through Discord, Slack, Teams, and Mattermost, with a pause control and reduced-motion support.
+The marketing site for **Natter** at **natter.talk**. Self-hosted team chat,
+video calls, 4K 60 fps screen sharing, and performance-first native apps without Electron.
+
+## Structure
+
+- `app/`: route composition, metadata, and the global theme.
+- `components/ui/`: shadcn-style Button and Badge primitives with variants and `cn`.
+- `components/particles/`: small visual pieces, brand marks, and illustration artwork.
+- `components/molecules/`: composed pieces such as Brand, BenefitCard, and the interactive hero.
+- `components/sections/`: page sections and header.
+- `components/marketing/marketing.css`: styles scoped to `.marketing-site`, including responsive layouts and illustration effects.
+- `lib/site.ts`: shared URLs, platforms, managed-hosting price, and metadata copy.
+
+The manual shadcn-compatible setup uses Tailwind CSS v4, Radix Slot, CVA,
+and the standard `components.json` aliases. Use `pnpm dlx shadcn@latest add <component>`
+to add further primitives. Colours follow [shadcn's semantic tokens](https://ui.shadcn.com/docs/theming)
+(`primary`, `secondary`, `muted-foreground`, `border`, `ring`, and so on).
+Natter's periwinkle and lime palette lives in `app/globals.css`; specialist
+illustration shading stays in the marketing styles and artwork.
+
+Most components render on the server. Only the pointer-responsive hero illustration
+uses a client boundary. Motion respects reduced-motion preferences.
 
 ## Development
 
@@ -33,5 +53,9 @@ No environment variables or external font downloads are required for the page.
 
 ```sh
 pnpm lint
+pnpm exec tsc --noEmit
+pnpm format:check
 pnpm build
 ```
+
+Run `pnpm format` to format source and documentation.
