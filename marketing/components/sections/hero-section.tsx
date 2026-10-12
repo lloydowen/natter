@@ -24,7 +24,6 @@ export function HeroSection() {
             <ArrowUpRight className="link-arrow" size={18} aria-hidden="true" />
           </a>
         </Button>
-        <p className="cta-note">Performance first. Native apps. No Electron.</p>
       </div>
       <HeroIllustration />
     </section>

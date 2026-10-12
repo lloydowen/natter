@@ -2,17 +2,6 @@
   .product-preview {
     margin: 0 0 56px;
   }
-  .product-preview figcaption {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 16px;
-    flex-wrap: wrap;
-    margin-top: 18px;
-    padding: 0 4px;
-    color: var(--muted-foreground);
-    font-size: 12px;
-  }
 
   .app-preview {
     display: flex;
@@ -592,10 +581,6 @@
     }
     .participant-name {
       font-size: 8px;
-    }
-    .product-preview figcaption {
-      font-size: 10px;
-      gap: 8px;
     }
   }
   @media (prefers-reduced-motion: reduce) {
