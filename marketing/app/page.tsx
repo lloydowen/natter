@@ -4,14 +4,14 @@ export default function Home() {
   return (
     <div className="holding-page">
       <header className="site-header">
-        <Link className="wordmark" href="/" aria-label="SFW home">
+        <Link className="wordmark" href="/" aria-label="Natter home">
           <svg className="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
             <path d="M10 5h28a5 5 0 0 1 5 5v23a5 5 0 0 1-5 5H22L9 45V38a5 5 0 0 1-4-5V10a5 5 0 0 1 5-5Z" fill="currentColor" />
             <path d="m20 15 13 8-13 8V15Z" fill="#faf9f6" />
           </svg>
-          <span>sfw<span className="wordmark-dot">.</span></span>
+          <span>natter<span className="wordmark-dot">.</span></span>
         </Link>
-        <span className="header-note">Safe for work. Room for fun.</span>
+        <span className="header-note">Good company. Great conversation.</span>
       </header>
 
       <main className="hero">
@@ -22,11 +22,11 @@ export default function Home() {
           Open source. A little more human.
         </p>
         <div className="coming-soon">Coming soon<span aria-hidden="true">↗</span></div>
-        <p className="domain">sfw.team</p>
+        <p className="domain">natter.talk</p>
       </main>
 
       <footer className="site-footer">
-        <span>SFW — Safe For Work</span>
+        <span>Natter — A little more conversation</span>
         <span>Made for teams with a little personality.</span>
       </footer>
     </div>

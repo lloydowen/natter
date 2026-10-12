@@ -1,4 +1,4 @@
-# Build context: marketing/ (docker build -t sfw-marketing ./marketing)
+# Build context: marketing/ (docker build -t natter-marketing ./marketing)
 FROM node:22-alpine AS base
 WORKDIR /app
 ENV NEXT_TELEMETRY_DISABLED=1
