@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   icons: { icon: "/icon.svg" },
   openGraph: {
     title: "Natter — Coming soon",
-    description: "Your team. Your space. 4K 60fps screen sharing, native apps, and your choice of hosting. Coming soon.",
+    description: "Team chat, voice calls, 4K 60fps screen sharing, and native apps. Host it yourself or choose managed hosting at £30/month per team. Coming soon.",
     url: "https://natter.talk",
     siteName: "Natter",
     type: "website",

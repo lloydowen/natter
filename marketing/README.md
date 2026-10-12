@@ -1,7 +1,7 @@
 # Natter marketing
 
 The coming-soon page for **Natter** at **natter.talk**.
-Built with Next.js and pnpm. The branding pairs charcoal and warm white with acid lime and a lowercase n mark. The headline rotates through Discord, Slack, Teams, and Mattermost, with a pause control and reduced-motion support.
+Built with Next.js and pnpm. The page uses a solid near-black background, off-white type, a muted blue accent, and a simple natter wordmark with an asterisk. The headline rotates through Discord, Slack, Teams, and Mattermost, with a pause control and reduced-motion support.
 
 ## Development
 
