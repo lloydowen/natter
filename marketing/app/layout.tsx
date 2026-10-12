@@ -5,11 +5,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://natter.talk"),
   title: "Natter — Coming soon",
   description:
-    "Good company. Great conversation. An open source home for team chat, channels, and crystal-clear live streaming. Coming soon to natter.talk.",
+    "Replace Discord, Slack, Teams, or Mattermost. Team chat, 4K 60fps screen sharing, and native apps. Self-host or choose managed hosting at £30/month per team. Coming soon.",
   icons: { icon: "/icon.svg" },
   openGraph: {
     title: "Natter — Coming soon",
-    description: "Good work. Great company. A new, open source home for your team.",
+    description: "Your team. Your space. 4K 60fps screen sharing, native apps, and your choice of hosting. Coming soon.",
     url: "https://natter.talk",
     siteName: "Natter",
     type: "website",

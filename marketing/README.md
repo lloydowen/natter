@@ -1,7 +1,7 @@
 # Natter marketing
 
 The coming-soon page for **Natter** at **natter.talk**.
-Built with Next.js and pnpm. The temporary branding uses a purple chat/play mark.
+Built with Next.js and pnpm. The branding pairs charcoal and warm white with acid lime and a lowercase n mark. The headline rotates through Discord, Slack, Teams, and Mattermost, with a pause control and reduced-motion support.
 
 ## Development
 
